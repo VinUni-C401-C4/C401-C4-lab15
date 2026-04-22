@@ -1,0 +1,42 @@
+
+PHẦN 1: BỘ WORKSHEET (TỪ 0 ĐẾN 5)
+
+WORKSHEET 0: LEARNING TIMELINE 
+- Kỹ năng tự tin nhất: Triển khai hạ tầng Web, xây dựng luồng RAG và xử lý Data Pipeline cho hệ thống AI[cite: 197].
+- Mô tả sản phẩm: AI Assistant hỗ trợ quy trình hành chính, tư vấn tuyển sinh và đồng hành cùng tân sinh viên với tính năng Workflow tự động tạo đơn từ[cite: 198].
+- Bài toán giải quyết: Giải quyết tình trạng quá tải thông tin mùa tuyển sinh và hỗ trợ sinh viên tiếp cận quy định học vụ 24/7[cite: 201].
+- Người dùng chính: Thí sinh, sinh viên năm nhất, cán bộ tuyển sinh[cite: 202].
+
+WORKSHEET 1: ENTERPRISE DEPLOYMENT CLINIC 
+- Dữ liệu liên quan: FAQ tuyển sinh, quy chế đào tạo, biểu mẫu và dữ liệu hồ sơ cá nhân (PII) như điểm thi, thông tin định danh[cite: 95].
+- Mức độ nhạy cảm: Cao do xử lý dữ liệu học tập và cá nhân của sinh viên[cite: 83].
+- Ràng buộc Enterprise lớn nhất: 
+  1. Bảo mật dữ liệu PII (không được đưa hoàn toàn lên Public Cloud)[cite: 71].
+  2. Traffic mùa cao điểm tăng đột biến (Spike Traffic)[cite: 98].
+  3. Cần tích hợp với hệ thống quản lý sinh viên (SIS) cũ[cite: 86].
+- Mô hình triển khai: Hybrid[cite: 211].
+- Lý do: Tận dụng Cloud để mở rộng linh hoạt cho FAQ công khai và On-premise để giữ an toàn dữ liệu nhạy cảm tại server nội bộ[cite: 212].
+
+WORKSHEET 2: COST ANATOMY LAB 
+- Ước lượng vận hành: 5.000 requests/ngày bình thường; 100.000+ requests/ngày mùa cao điểm[cite: 224].
+- Các lớp chi phí: Token (LLM API), Compute (On-premise & Cloud), Storage (Vector DB), Phí bảo trì và Đồng bộ dữ liệu[cite: 226].
+- Cost driver lớn nhất: Chi phí Token API trong mùa cao điểm[cite: 230].
+- Hidden cost: Phí băng thông truyền tải dữ liệu an toàn (Egress) giữa Cloud và On-premise[cite: 231].
+
+WORKSHEET 3: COST OPTIMIZATION DEBATE 
+- Chiến lược 1 - Semantic Caching: Lưu câu trả lời cho FAQ phổ biến để giảm 70% lượt gọi API LLM[cite: 241].
+- Chiến lược 2 - Model Routing: Dùng model nhỏ để phân loại Intent trước khi dùng model lớn cho tác vụ phức tạp[cite: 240].
+- Chiến lược 3 - Prompt Compression: Nén prompt và lọc dữ liệu thừa tại On-premise trước khi gửi lên Cloud[cite: 242].
+
+WORKSHEET 4: SCALING & RELIABILITY TABLETOP 
+- Tình huống traffic đột biến: Sử dụng hệ thống Queue và Auto-scaling trên Cloud để điều phối[cite: 258].
+- Tình huống Provider lỗi: Chuyển sang Fallback với Menu lựa chọn cố định (Rule-based) hoặc hotline hỗ trợ[cite: 259].
+- Metric giám sát: Độ trễ (Latency), Tỷ lệ lỗi (Error Rate) và Tỷ lệ hit của Cache[cite: 254].
+
+WORKSHEET 5: SKILLS MAP & TRACK DIRECTION 
+- Điểm mạnh hiện tại: Liên kết tốt giữa AI Engineering và Infra/Ops[cite: 264].
+- Track đề xuất Phase 2: AI Engineering & Data Ops[cite: 265].
+- Kỹ năng cần bổ sung: Quản trị hạ tầng Hybrid, kỹ thuật ẩn danh dữ liệu (Anonymization) và tối ưu hóa Vector DB quy mô lớn[cite: 266].
+
+
+
